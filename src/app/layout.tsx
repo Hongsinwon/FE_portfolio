@@ -2,18 +2,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBlogger, faGithub } from "@fortawesome/free-brands-svg-icons";
 import type { Metadata } from "next";
 import style from "./layout.module.css";
-import "./globals.css";
-import "./reset.css";
+import "./globals.module.css";
+import "./globals.module.css";
 import Link from "next/link";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Profile from "../components/profile";
 
 export const metadata: Metadata = {
-  title: "HongSinWon_Portfolio2025",
-  description: "프론트엔드 개발자 Portfolio2025",
+  title: "HongSinWon_Portfolio",
+  description: "프론트엔드 개발자 Portfolio",
   openGraph: {
     title: "HongSinWon_Portfolio2025",
-    description: "프론트엔드 개발자 Portfolio2025",
+    description: "프론트엔드 개발자 Portfolio",
     images: ["/thumbnail.png"],
   },
   icons: {
@@ -28,7 +28,7 @@ async function Header() {
     <header>
       <div className={style.headerBody}>
         <h1>
-          <Link href={"/"}>2025 portfolio</Link>
+          <Link href={"/"}>Frontend Developer Portfolio</Link>
         </h1>
         <div className={style.headerIcon}>
           <div>
@@ -50,7 +50,7 @@ async function Header() {
 }
 
 async function Footer() {
-  return <footer>제작 ©HongSinWon_Portfolio@2025</footer>;
+  return <footer>제작 ©HongSinWon_Portfolio@</footer>;
 }
 
 async function ScrollButton() {
