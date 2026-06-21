@@ -10,13 +10,31 @@
   border-right: #333 1px solid;
 }
 
-.title {
-  font-size: 18px;
+.feContent {
+  color:#0080ff;
   font-weight: bolder;
+  margin-bottom: 10px;
+  
+}
+
+.name {
+  font-size: 28px;
+  font-weight: bolder;
+  line-height: 1.2;
+}
+
+.nameContent {
+  color: #999;
+  font-size: 12px;
+}
+
+.contactInfo {
+  margin-top: 16px;
+
 }
 
 .content {
-  color: #bbb;
+  color: #ddd;
 }
 
 .aboutMe {

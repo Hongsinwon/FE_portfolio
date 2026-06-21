@@ -50,7 +50,7 @@ async function Header() {
 }
 
 async function Footer() {
-  return <footer>제작 ©HongSinWon_Portfolio@</footer>;
+  return <footer>제작 ©HongSinWon_Frontend_Portfolio@</footer>;
 }
 
 async function ScrollButton() {
