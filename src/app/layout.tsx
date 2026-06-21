@@ -1,19 +1,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBlogger, faGithub } from "@fortawesome/free-brands-svg-icons";
 import type { Metadata } from "next";
 import style from "./layout.module.css";
+import htmlIcon from "../../public/skill/html5.webp";
 import "./globals.css";
 import "./reset.css";
 import Link from "next/link";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Profile from "../components/profile";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "HongSinWon_Portfolio",
-  description: "프론트엔드 개발자 Portfolio",
+  description: "SINWON FE Portfolio",
   openGraph: {
     title: "HongSinWon_Portfolio2025",
-    description: "프론트엔드 개발자 Portfolio",
+    description: "SINWON FE Portfolio",
     images: ["/thumbnail.png"],
   },
   icons: {
@@ -28,15 +29,17 @@ async function Header() {
     <header>
       <div className={style.headerBody}>
         <h1>
+          <Image src={htmlIcon} alt="html5" width={30} />
           <Link href={"/"}>SINWON FE Portfolio</Link>
         </h1>
+        <div>색 온오프</div>
       </div>
     </header>
   );
 }
 
 async function Footer() {
-  return <footer>제작 ©HongSinWon_Frontend_Portfolio@</footer>;
+  return <footer>제작 © HongSinWon_Frontend_Portfolio</footer>;
 }
 
 async function ScrollButton() {

@@ -9,15 +9,18 @@
     "linkData": [
       {
         "url": "https://play.google.com/store/apps/details?id=co.thegn.pinpleapp&hl=ko",
-        "text": "스토어"
+        "text": "스토어",
+        "target": true
       },
       {
         "url": "https://onooff.space/",
-        "text": "홈페이지"
+        "text": "홈페이지",
+        "target": true
       },
       {
-        "url": "https://2025-portfolio-sooty.vercel.app/onooff",
-        "text": "상세페이지"
+        "url": "onooff",
+        "text": "상세페이지",
+        "target": false
       }
     ],
     "skill": [
@@ -44,11 +47,13 @@
     "linkData": [
       {
         "url": "https://play.google.com/store/apps/details?id=kr.co.techni.mglb2&pcampaignid=web_share",
-        "text": "스토어"
+        "text": "스토어",
+        "target": true
       },
       {
-        "url": "https://2025-portfolio-sooty.vercel.app/mintonin",
-        "text": "상세페이지 및 개인 리뉴얼"
+        "url": "mintonin",
+        "text": "상세페이지 및 개인 리뉴얼",
+        "target": false
       }
     ],
     "skill": ["HTML5", "CSS3", "JavaScript", "Photoshop", " Illustrator", "XD"],
@@ -66,11 +71,13 @@
     "linkData": [
       {
         "url": "https://sinwon-portfolio.web.app/",
-        "text": "홈페이지"
+        "text": "홈페이지",
+        "target": true
       },
       {
         "url": "https://github.com/Hongsinwon/2022ver_portfolio",
-        "text": "Github"
+        "text": "Github",
+        "target": true
       }
     ],
     "skill": ["html5", "css3", "React.js", "firebase"],

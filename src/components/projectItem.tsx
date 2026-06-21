@@ -38,7 +38,15 @@ export default function ProjectItem({
           {linkData?.length &&
             linkData.map((data) => {
               return (
-                <Link href={data.url} key={data.text}>
+                <Link
+                  href={
+                    data.url === "onooff" || data.url === "mintonin"
+                      ? `/${data.url}`
+                      : data.url
+                  }
+                  key={data.text}
+                  target={data.target ? "_blank" : "_self"}
+                >
                   {data.text}
                 </Link>
               );
