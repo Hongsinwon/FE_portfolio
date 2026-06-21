@@ -1,0 +1,61 @@
+.themeSwitch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* width: 52px;
+  height: 28px; */
+  height: 35px;
+  width: 68px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background-color: #e46533;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.themeSwitchOn {
+  background-color: #4a4a4a;
+}
+
+.themeSwitchThumb {
+  position: absolute;
+  top: 4.5px;
+  left: 4.5px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.themeSwitchOn .themeSwitchThumb {
+  transform: translateX(33px);
+}
+
+.themeSwitchIcon {
+  position: absolute;
+  top: 50%;
+  font-size: 16px;
+  line-height: 1;
+  transform: translateY(-55%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.themeSwitchIconSun {
+  left: 7px;
+}
+
+.themeSwitchIconMoon {
+  right: 7px;
+}
+
+.themeSwitchOn .themeSwitchIconSun {
+  opacity: 0.4;
+}
+
+.themeSwitch:not(.themeSwitchOn) .themeSwitchIconMoon {
+  opacity: 0.4;
+}

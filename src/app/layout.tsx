@@ -1,13 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { Metadata } from "next";
 import style from "./layout.module.css";
-import htmlIcon from "../../public/skill/html5.webp";
 import "./globals.css";
 import "./reset.css";
-import Link from "next/link";
+
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Profile from "../components/profile";
-import Image from "next/image";
+
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 export const metadata: Metadata = {
   title: "HongSinWon_Portfolio",
@@ -23,24 +24,6 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png", // iOS용
   },
 };
-
-async function Header() {
-  return (
-    <header>
-      <div className={style.headerBody}>
-        <h1>
-          <Image src={htmlIcon} alt="html5" width={30} />
-          <Link href={"/"}>SINWON FE Portfolio</Link>
-        </h1>
-        <div>색 온오프</div>
-      </div>
-    </header>
-  );
-}
-
-async function Footer() {
-  return <footer>제작 © HongSinWon_Frontend_Portfolio</footer>;
-}
 
 async function ScrollButton() {
   return (

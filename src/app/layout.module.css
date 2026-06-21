@@ -26,7 +26,8 @@
 .container > header > .headerBody {
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  align-items: center;
+  width: 85vw;
   height: 70px;
   line-height: 70px;
 }
