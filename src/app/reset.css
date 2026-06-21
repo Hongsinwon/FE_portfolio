@@ -117,6 +117,8 @@ body {
   line-height: 1;
   font-family: "Nanum Gothic", sans-serif;
   font-size: 1.4rem;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 body,
 input,
@@ -125,7 +127,7 @@ select,
 textarea,
 th,
 td {
-  color: #222;
+  color: var(--foreground);
 }
 
 a {

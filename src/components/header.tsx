@@ -3,16 +3,53 @@
 import htmlIcon from "../../public/skill/html5.webp";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useTheme } from "next-themes";
+import { useEffect, useRef, useState } from "react";
 import layoutStyle from "../app/layout.module.css";
+import { toggleThemeWithTransition } from "../lib/themeTransition";
 import style from "./header.module.css";
 
+const THUMB_OFFSET = 33;
+const SLIDE_DURATION = 350;
+
 export default function Header() {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
-  const isDark = theme === "dark";
+  const { resolvedTheme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+  const thumbRef = useRef<HTMLSpanElement>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || !thumbRef.current) return;
+
+    const isDark = resolvedTheme === "dark";
+    setIsChecked(isDark);
+    thumbRef.current.style.transform = `translateX(${isDark ? THUMB_OFFSET : 0}px)`;
+  }, [mounted, resolvedTheme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+    const nextChecked = !isChecked;
+    const thumb = thumbRef.current;
+
+    if (thumb) {
+      thumb.animate(
+        [
+          { transform: `translateX(${isChecked ? THUMB_OFFSET : 0}px)` },
+          { transform: `translateX(${nextChecked ? THUMB_OFFSET : 0}px)` },
+        ],
+        {
+          duration: SLIDE_DURATION,
+          easing: "cubic-bezier(0.4, 0, 0.2, 1)",
+          fill: "forwards",
+        },
+      );
+    }
+
+    setIsChecked(nextChecked);
+    toggleThemeWithTransition(setTheme, nextChecked ? "dark" : "light");
   };
 
   return (
@@ -25,23 +62,30 @@ export default function Header() {
         <button
           type="button"
           role="switch"
-          aria-checked={isDark}
+          aria-checked={isChecked}
           aria-label="다크 모드 전환"
-          className={`${style.themeSwitch} ${isDark ? style.themeSwitchOn : ""}`}
+          disabled={!mounted}
+          className={`${style.themeSwitch} ${isChecked ? style.themeSwitchOn : ""}`}
           onClick={toggleTheme}
         >
-          <span className={style.themeSwitchThumb} />
-          <span
-            className={`${style.themeSwitchIcon} ${style.themeSwitchIconSun}`}
-            aria-hidden="true"
-          >
-            ☀️
-          </span>
-          <span
-            className={`${style.themeSwitchIcon} ${style.themeSwitchIconMoon}`}
-            aria-hidden="true"
-          >
-            🌙
+          <span className={style.themeSwitchTrack}>
+            <span
+              className={`${style.themeSwitchIcon} ${style.themeSwitchIconSun}`}
+              aria-hidden="false"
+            >
+              ☀️
+            </span>
+            <span
+              className={`${style.themeSwitchIcon} ${style.themeSwitchIconMoon}`}
+              aria-hidden="false"
+            >
+              🌙
+            </span>
+            <span
+              ref={thumbRef}
+              className={style.themeSwitchThumb}
+              aria-hidden="true"
+            />
           </span>
         </button>
       </div>

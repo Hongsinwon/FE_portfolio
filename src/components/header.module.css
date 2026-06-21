@@ -1,47 +1,61 @@
 .themeSwitch {
   position: relative;
-  display: flex;
-  align-items: center;
-  /* width: 52px;
-  height: 28px; */
-  height: 35px;
+  flex-shrink: 0;
   width: 68px;
+  height: 35px;
   padding: 0;
   border: none;
   border-radius: 999px;
-  background-color: #e46533;
+  background-color: var(--switch-track);
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.themeSwitch:disabled {
+  cursor: default;
+  opacity: 0;
+}
+
+.themeSwitch:not(:disabled) {
+  opacity: 1;
 }
 
 .themeSwitchOn {
-  background-color: #4a4a4a;
+  background-color: var(--switch-track-active);
+}
+
+.themeSwitchTrack {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .themeSwitchThumb {
   position: absolute;
   top: 4.5px;
   left: 4.5px;
-  width: 26px;
-  height: 26px;
+  z-index: 2;
+  width: 27px;
+  height: 27px;
   border-radius: 50%;
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.themeSwitchOn .themeSwitchThumb {
-  transform: translateX(33px);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  transform: translateX(0);
+  will-change: transform;
 }
 
 .themeSwitchIcon {
   position: absolute;
   top: 50%;
+  z-index: 1;
   font-size: 16px;
   line-height: 1;
-  transform: translateY(-55%);
   pointer-events: none;
   user-select: none;
+  transform: translateY(-55%);
+  z-index: 100;
 }
 
 .themeSwitchIconSun {
@@ -53,9 +67,14 @@
 }
 
 .themeSwitchOn .themeSwitchIconSun {
-  opacity: 0.4;
+  opacity: 0.35;
 }
 
 .themeSwitch:not(.themeSwitchOn) .themeSwitchIconMoon {
-  opacity: 0.4;
+  opacity: 0.35;
+}
+
+.themeSwitch:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }

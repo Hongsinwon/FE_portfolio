@@ -1,0 +1,74 @@
+/* ===== 라이트 테마 ===== */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --color-primary: #0080ff;
+  --color-border: #e5e7eb;
+
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --text-body: #444444;
+
+  --surface: #f5f5f5;
+  --surface-card: #ffffff;
+  --surface-tag: #eeeeee;
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  --button-secondary-border: #ebebeb;
+
+  --switch-track: #e46533;
+  --switch-track-active: #94a3b8;
+}
+
+/* ===== 다크 테마 ===== */
+.dark {
+  --background: #151515;
+  --foreground: #ededed;
+
+  --color-primary: #0080ff;
+  --color-border: #333333;
+
+  --text-primary: #ededed;
+  --text-secondary: #999999;
+  --text-muted: #777777;
+  --text-body: #dddddd;
+
+  --surface: #111111;
+  --surface-card: #111111;
+  --surface-tag: #252525;
+
+  --button-primary-hover: #cccccc;
+  --button-secondary-hover: #1a1a1a;
+  --button-secondary-border: #1a1a1a;
+
+  --switch-track: #e46533;
+  --switch-track-active: #4a4a4a;
+}
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.35s;
+    animation-timing-function: ease;
+    mix-blend-mode: normal;
+  }
+
+  ::view-transition-old(root) {
+    z-index: 1;
+  }
+
+  ::view-transition-new(root) {
+    z-index: 2;
+  }
+}

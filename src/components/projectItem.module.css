@@ -6,8 +6,8 @@
   margin-bottom: 10px;
   line-height: 1.6;
   letter-spacing: -0.25px;
-  background-color: #111;
-  border: #222 1px solid;
+  background-color: var(--surface-card);
+  border: 1px solid var(--color-border);
   border-radius: 14px;
 }
 
@@ -25,11 +25,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
+  color: var(--foreground);
 }
 
 .title {
-  color: #0080ff;
+  color: var(--color-primary);
   font-size: 28px;
   font-weight: bolder;
 }
@@ -41,17 +41,17 @@
 .position {
   font-size: 14px;
   font-weight: 500;
-  color: #ccc;
+  color: var(--text-body);
 }
 
 .period {
   padding-top: 6px;
   font-size: 13px;
-  color: #999;
+  color: var(--text-muted);
 }
 
 .info {
-  color: #eee;
+  color: var(--text-body);
   letter-spacing: -0.75px;
 }
 
@@ -67,7 +67,7 @@
 
   padding: 3px 20px;
   display: inline-block;
-  color: #0080ff;
+  color: var(--color-primary);
   border: #0080ff 1px solid;
   border-radius: 8px;
   transition: all 0.5s;
@@ -78,7 +78,7 @@
 }
 
 .link a:hover {
-  color: #0080ff;
+  color: var(--color-primary);
   background-color: rgba(0, 128, 255, 0.25);
   border: #0080ff 1px solid;
 }
@@ -89,8 +89,8 @@
   padding: 2px 16px 3px;
   display: inline-block;
   font-size: 12px;
-  color: #bbb;
-  background-color: #252525;
+  color: var(--text-secondary);
+  background-color: var(--surface-tag);
   border-radius: 20px;
 }
 

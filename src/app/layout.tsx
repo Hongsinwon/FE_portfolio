@@ -3,12 +3,14 @@ import type { Metadata } from "next";
 import style from "./layout.module.css";
 import "./globals.css";
 import "./reset.css";
+import "./colors.css";
 
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Profile from "../components/profile";
 
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import NextThemesProvider from "@/components/NextThemesProvider";
 
 export const metadata: Metadata = {
   title: "HongSinWon_Portfolio",
@@ -44,20 +46,37 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("theme");var d=window.matchMedia("(prefers-color-scheme: dark)").matches;var c=t==="dark"||((t==="system"||!t)&&d)?"dark":"light";document.documentElement.classList.add(c)}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body>
-        <div className={style.container}>
-          <Header />
-          <main>
-            <Profile />
-            <section className={style.mainSection}>
-              <div>스킬</div>
-              <div className={style.mainWarp}>{children}</div>
-            </section>
-          </main>
-          <Footer />
-          <ScrollButton />
-        </div>
+        <NextThemesProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          enableColorScheme
+          disableTransitionOnChange
+          storageKey="theme"
+          themes={["light", "dark"]}
+        >
+          <div className={style.container}>
+            <Header />
+            <main>
+              <Profile />
+              <section className={style.mainSection}>
+                <div>스킬</div>
+                <div className={style.mainWarp}>{children}</div>
+              </section>
+            </main>
+            <Footer />
+            <ScrollButton />
+          </div>
+        </NextThemesProvider>
       </body>
     </html>
   );
