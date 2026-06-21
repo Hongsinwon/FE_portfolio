@@ -3,7 +3,7 @@ import { faBlogger, faGithub } from "@fortawesome/free-brands-svg-icons";
 import type { Metadata } from "next";
 import style from "./layout.module.css";
 import "./globals.css";
-import "./reset.module.css";
+import "./reset.css";
 import Link from "next/link";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Profile from "../components/profile";
@@ -28,9 +28,9 @@ async function Header() {
     <header>
       <div className={style.headerBody}>
         <h1>
-          <Link href={"/"}>Frontend Developer Portfolio</Link>
+          <Link href={"/"}>FE Portfolio</Link>
         </h1>
-        <div className={style.headerIcon}>
+        {/* <div className={style.headerIcon}>
           <div>
             <Link href={"https://sinwon-fe.tistory.com/"}>
               <FontAwesomeIcon icon={faBlogger} />
@@ -43,7 +43,7 @@ async function Header() {
               <span className={style.hide}>깃허브</span>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </header>
   );
