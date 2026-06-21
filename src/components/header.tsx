@@ -1,6 +1,6 @@
 "use client";
 
-import htmlIcon from "../../public/skill/html5.webp";
+import mainIcon from "../../public/thumbnail/icon.png";
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "next-themes";
@@ -56,7 +56,7 @@ export default function Header() {
     <header>
       <div className={layoutStyle.headerBody}>
         <h1>
-          <Image src={htmlIcon} alt="html5" width={30} />
+          <Image src={mainIcon} alt="html5" width={30} />
           <Link href={"/"}>SINWON FE Portfolio</Link>
         </h1>
         <button

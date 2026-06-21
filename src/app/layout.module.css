@@ -88,10 +88,6 @@
   margin-top: 70px;
 }
 
-.mainWarp {
-  padding: 24px;
-}
-
 @media (max-width: 1500px) {
   .container > header > .headerBody {
     width: 90vw;

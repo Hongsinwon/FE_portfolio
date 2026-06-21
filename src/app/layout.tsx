@@ -13,10 +13,10 @@ import Header from "@/components/header";
 import NextThemesProvider from "@/components/NextThemesProvider";
 
 export const metadata: Metadata = {
-  title: "HongSinWon_Portfolio",
+  title: "SINWON_FE_Portfolio",
   description: "SINWON FE Portfolio",
   openGraph: {
-    title: "HongSinWon_Portfolio2025",
+    title: "SINWON_FE_Portfolio",
     description: "SINWON FE Portfolio",
     images: ["/thumbnail.png"],
   },
@@ -69,7 +69,6 @@ export default function RootLayout({
             <main>
               <Profile />
               <section className={style.mainSection}>
-                <div>스킬</div>
                 <div className={style.mainWarp}>{children}</div>
               </section>
             </main>
