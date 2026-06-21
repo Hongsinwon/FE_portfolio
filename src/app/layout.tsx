@@ -28,22 +28,8 @@ async function Header() {
     <header>
       <div className={style.headerBody}>
         <h1>
-          <Link href={"/"}>FE Portfolio</Link>
+          <Link href={"/"}>SINWON FE Portfolio</Link>
         </h1>
-        {/* <div className={style.headerIcon}>
-          <div>
-            <Link href={"https://sinwon-fe.tistory.com/"}>
-              <FontAwesomeIcon icon={faBlogger} />
-              <span className={style.hide}>블로그</span>
-            </Link>
-          </div>
-          <div>
-            <Link href={"https://github.com/Hongsinwon"}>
-              <FontAwesomeIcon icon={faGithub} />
-              <span className={style.hide}>깃허브</span>
-            </Link>
-          </div>
-        </div> */}
       </div>
     </header>
   );
@@ -78,7 +64,10 @@ export default function RootLayout({
           <Header />
           <main>
             <Profile />
-            <div className={style.mainWarp}>{children}</div>
+            <section className={style.mainSection}>
+              <div>스킬</div>
+              <div className={style.mainWarp}>{children}</div>
+            </section>
           </main>
           <Footer />
           <ScrollButton />

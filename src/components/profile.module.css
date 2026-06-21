@@ -1,9 +1,8 @@
 .profileSection {
-  padding-top: 50px;
-  padding-bottom: 80px;
+  padding-top: 30px;
   width: 30vw;
   color: #fff;
-  line-height: 1.6;
+  line-height: 1.5;
   font-size: 14px;
   text-align: center;
   letter-spacing: -0.25px;
@@ -11,10 +10,8 @@
 }
 
 .feContent {
-  color:#0080ff;
+  color: #0080ff;
   font-weight: bolder;
-  margin-bottom: 10px;
-  
 }
 
 .name {
@@ -28,12 +25,38 @@
   font-size: 12px;
 }
 
+/* 연락처 */
 .contactInfo {
   margin-top: 16px;
+}
 
+.contactContent {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 10px;
+  font-size: 15px;
+  color: #ddd;
+}
+
+.contactTitle {
+  color: #0080ff;
+  opacity: 0.5;
+}
+
+.contactInfo .contactTitle > span.hide {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+}
+
+.contactInfo span.line {
+  text-decoration: underline;
 }
 
 .content {
+  font-size: 14px;
   color: #ddd;
 }
 
@@ -69,12 +92,8 @@
 }
 
 .introduction {
-  padding-top: 40px;
+  padding-top: 20px;
   letter-spacing: -1px;
-}
-
-.introduction > div {
-  padding-bottom: 28px;
 }
 
 .introduction .infoTitle {
@@ -82,6 +101,13 @@
   font-size: 16px;
   font-weight: bolder;
   letter-spacing: -0.5px;
+  color: #0080ff;
+  opacity: 0.9;
+}
+
+.introduction .content {
+  font-size: 15px;
+  color: #ddd;
 }
 
 @media (max-width: 1500px) {
@@ -94,17 +120,16 @@
     border-bottom: #333 1px solid;
   }
 
-  .skill .skillIcon {
+  /* .skill .skillIcon {
     width: 25vw;
     gap: 20px;
   }
 
   .skill .skillIcon img {
     width: 20vw;
-  }
+  } */
 
   .aboutMe,
-  .skill,
   .introduction {
     display: flex;
     align-items: center;
@@ -123,10 +148,10 @@
     flex-direction: column;
   }
 
-  .skill .skillIcon {
+  /* .skill .skillIcon {
     width: 60vw;
     gap: 16px;
-  }
+  } */
 
   .introduction div:nth-child(1) {
     display: block;

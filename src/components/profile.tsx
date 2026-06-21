@@ -14,6 +14,11 @@ import flutterIcon from "../../public/skill/flutter.webp";
 import gitIcon from "../../public/skill/git.png";
 import githubIcon from "../../public/skill/github.webp";
 import { usePathname } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBlogger, faGithub } from "@fortawesome/free-brands-svg-icons";
+
+import { faEnvelopeCircleCheck } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export default function Profile() {
   const pathname = usePathname();
@@ -23,31 +28,51 @@ export default function Profile() {
       className={`${style.profileSection} ${pathname === "/" ? "" : style.none}`}
     >
       <div className={style.aboutMe}>
+        <p className={style.feContent}>Frontend Developer</p>
         <Image src={profile} alt="증명사진" width={140} />
         <div className={style.meInfo}>
-          <p className={style.feContent}>Frontend Developer</p>
           <b className={style.name}>홍 신 원</b>
           <p className={style.nameContent}>Hong Sin Won</p>
         </div>
         <div className={style.contactInfo}>
-          <div>
-            <p className={style.contactContent}>
-              <span>E-mail</span>
+          <div className={style.contactContent}>
+            <div className={style.contactTitle}>
+              <FontAwesomeIcon icon={faEnvelopeCircleCheck} />
+              <span className={style.hide}>E-mail</span>
+            </div>
+            <p className={style.contactValue}>ghdtlsdnjs1234@gmail.com</p>
+          </div>
+          <div className={style.contactContent}>
+            <div className={style.contactTitle}>
+              <FontAwesomeIcon icon={faGithub} />
+              <span className={style.hide}>Github</span>
+            </div>
+            <p className={style.contactValue}>
+              <Link href={"https://github.com/Hongsinwon"} target="_blank">
+                <span className={style.line}>
+                  https://github.com/Hongsinwon
+                </span>
+              </Link>
             </p>
           </div>
-          <div>
-            <p className={style.contactContent}>
-              <span>Github</span>
-            </p>
-          </div>
-          <div>
-            <p className={style.contactContent}>
-              <span>Blog</span>
+          <div className={style.contactContent}>
+            <div className={style.contactTitle}>
+              <FontAwesomeIcon icon={faBlogger} />
+
+              <span className={style.hide}>Blog</span>
+            </div>
+            <p className={style.contactValue}>
+              <Link href={"https://sinwon-fe.tistory.com"} target="_blank">
+                <span className={style.line}>
+                  https://sinwon-fe.tistory.com
+                </span>
+              </Link>
             </p>
           </div>
         </div>
       </div>
-      <div className={style.skill}>
+      {/* TODO : 메인 추가내용 */}
+      {/* <div className={style.skill}>
         <div className={style.title}>SKILL</div>
         <div className={style.skillIcon}>
           <Image src={htmlIcon} alt="html5" width={30} />
@@ -61,22 +86,13 @@ export default function Profile() {
           <Image src={gitIcon} alt="git" width={30} />
           <Image src={githubIcon} alt="githubIcon" width={30} />
         </div>
-      </div>
+      </div> */}
 
       <div className={style.introduction}>
+        {/* TODO : 내용 수정 */}
         <div>
-          <p className={style.infoTitle}>
-            Q. 일에 있어 가장 중요하게 생각하고 있는 것
-          </p>
-          <p className={style.content}>
-            업무 중 발생하는 다양한 문제 상황에 대해 적극적으로 의견을 제시하고
-            <br />
-            협의를 통해 최선의 해결책을 도출하는 것을 중요하게 생각합니다.{" "}
-            <br /> 또한, 논의된 내용을 문서화하여 문제 발생의 원인을 명확히
-            이해하고, <br />
-            이를 기반으로 더 나은 개선 방안을 제시할 수 있도록 <br /> 노력하는
-            것이 중요하다 생각합니다.
-          </p>
+          <p className={style.infoTitle}>Q. 내용 수정</p>
+          <p className={style.content}>내용수정</p>
         </div>
       </div>
     </div>

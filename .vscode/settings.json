@@ -18,5 +18,50 @@
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "todohighlight.isEnable": true,
+  "todohighlight.isCaseSensitive": false,
+  "todohighlight.keywords": [
+    {
+      "text": "TODO:",
+      "color": "#1a1a1a",
+      "backgroundColor": "#ffbd2a",
+      "overviewRulerColor": "#ffbd2a"
+    },
+    {
+      "text": "FIXME:",
+      "color": "#ffffff",
+      "backgroundColor": "#f06292",
+      "overviewRulerColor": "#f06292"
+    },
+    {
+      "text": "NOTE:",
+      "color": "#ffffff",
+      "backgroundColor": "#42a5f5",
+      "overviewRulerColor": "#42a5f5"
+    },
+    {
+      "text": "HACK:",
+      "color": "#ffffff",
+      "backgroundColor": "#ab47bc",
+      "overviewRulerColor": "#ab47bc"
+    }
+  ],
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.css",
+    "**/*.scss",
+    "**/*.json"
+  ],
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/.next/**",
+    "**/out/**",
+    "**/build/**",
+    "**/dist/**",
+    "**/*.min.js"
+  ]
 }
