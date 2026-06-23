@@ -2,6 +2,7 @@ import { ProjectData } from "@/types";
 import Image from "next/image";
 import style from "./detailTopInfo.module.css";
 import itemStyle from "./projectItem.module.css";
+import { SKILL_ICONS } from "@/lib/skillIcons";
 
 export default function DetailTopInfo({
   id,
@@ -26,11 +27,18 @@ export default function DetailTopInfo({
 
           <p className={itemStyle.period}>{period}</p>
         </div>
-        <div className={style.skill}>
-          {skill.map((data) => {
-            return <div key={data}>{data}</div>;
+        <ul className={style.skill}>
+          {skill.map((name) => {
+            const icon = SKILL_ICONS[name];
+            if (!icon) return null;
+
+            return (
+              <li key={name}>
+                <Image src={icon.src} alt={icon.alt} width={35} />
+              </li>
+            );
           })}
-        </div>
+        </ul>
       </div>
       <div className={style.itemImage}>
         <Image
