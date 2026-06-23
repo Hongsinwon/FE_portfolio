@@ -2,17 +2,7 @@ import Link from "next/link";
 import style from "./projectItem.module.css";
 import Image from "next/image";
 import { ProjectData } from "../types";
-
-import htmlIcon from "../../public/skill/html5.webp";
-import cssIcon from "../../public/skill/css3.webp";
-import jsIcon from "../../public/skill/JS.webp";
-import reactIcon from "../../public/skill/react.webp";
-import nextIcon from "../../public/skill/next.webp";
-import typescriptIcon from "../../public/skill/typescript.webp";
-import dartIcon from "../../public/skill/dart.webp";
-import flutterIcon from "../../public/skill/flutter.webp";
-import gitIcon from "../../public/skill/git.png";
-import githubIcon from "../../public/skill/github.webp";
+import { SKILL_ICONS } from "../lib/skillIcons";
 
 export default function ProjectItem({
   id,
@@ -70,8 +60,15 @@ export default function ProjectItem({
             })}
         </ul>
         <ul className={style.skill}>
-          {skill.map((data) => {
-            return <li key={data}>{data}</li>;
+          {skill.map((name) => {
+            const icon = SKILL_ICONS[name];
+            if (!icon) return null;
+
+            return (
+              <li key={name}>
+                <Image src={icon.src} alt={icon.alt} width={30} />
+              </li>
+            );
           })}
         </ul>
       </div>

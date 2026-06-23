@@ -85,15 +85,14 @@ ul.skill {
   border: #0080ff 1px solid;
 }
 
-ul.skill li {
-  margin-right: 8px;
-  margin-bottom: 10px;
-  padding: 2px 16px 3px;
-  display: inline-block;
-  font-size: 12px;
-  color: var(--text-secondary);
-  background-color: var(--surface-tag);
-  border-radius: 20px;
+ul.skill {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+ul.skill li img {
+  border-radius: 5px;
 }
 
 @media (max-width: 900px) {

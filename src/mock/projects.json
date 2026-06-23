@@ -24,15 +24,15 @@
       }
     ],
     "skill": [
-      "dart",
-      "flutter",
-      "React.js",
-      "next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "firebase",
-      "Illustrator",
-      "Figma"
+      "dartIcon",
+      "flutterIcon",
+      "reactIcon",
+      "nextIcon",
+      "typescriptIcon",
+      "tailwindIcon",
+      "firebaseIcon",
+      "illustratorIcon",
+      "figmaIcon"
     ],
     "info": [
       "모바일 앱 서비스 기획 및 UI/UX 설계",
@@ -61,7 +61,14 @@
         "target": false
       }
     ],
-    "skill": ["HTML5", "CSS3", "JavaScript", "Photoshop", " Illustrator", "XD"],
+    "skill": [
+      "htmlIcon",
+      "cssIcon",
+      "jsIcon",
+      "photoshopIcon",
+      "illustratorIcon",
+      "adobeXdIcon"
+    ],
     "info": [
       "모바일 앱 서비스 기획 및 UI/UX 설계",
       "기존 서비스 화면 디자인 리뉴얼",
@@ -90,7 +97,7 @@
         "target": true
       }
     ],
-    "skill": ["html5", "css3", "React.js", "firebase"],
+    "skill": ["htmlIcon", "cssIcon", "reactIcon", "firebaseIcon"],
     "imageUrl": "/thumbnail/2022.svg"
   }
 ]

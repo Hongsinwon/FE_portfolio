@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import htmlIcon from "../../public/skill/html5.webp";
 import cssIcon from "../../public/skill/css3.webp";
-import jsIcon from "../../public/skill/JS.webp";
+import jsIcon from "../../public/skill/javaScript.png";
 import reactIcon from "../../public/skill/react.webp";
 import nextIcon from "../../public/skill/next.webp";
 import typescriptIcon from "../../public/skill/typescript.webp";

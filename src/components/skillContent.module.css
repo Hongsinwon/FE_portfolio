@@ -38,3 +38,7 @@
   justify-content: space-between;
   gap: 12px;
 }
+
+.skillList li img {
+  border-radius: 5px;
+}
