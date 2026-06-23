@@ -42,3 +42,10 @@
 .skillList li img {
   border-radius: 5px;
 }
+
+@media (max-width: 900px) {
+  .skillContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
