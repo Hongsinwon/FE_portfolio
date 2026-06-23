@@ -3,6 +3,17 @@ import style from "./projectItem.module.css";
 import Image from "next/image";
 import { ProjectData } from "../types";
 
+import htmlIcon from "../../public/skill/html5.webp";
+import cssIcon from "../../public/skill/css3.webp";
+import jsIcon from "../../public/skill/JS.webp";
+import reactIcon from "../../public/skill/react.webp";
+import nextIcon from "../../public/skill/next.webp";
+import typescriptIcon from "../../public/skill/typescript.webp";
+import dartIcon from "../../public/skill/dart.webp";
+import flutterIcon from "../../public/skill/flutter.webp";
+import gitIcon from "../../public/skill/git.png";
+import githubIcon from "../../public/skill/github.webp";
+
 export default function ProjectItem({
   id,
   imageUrl,
