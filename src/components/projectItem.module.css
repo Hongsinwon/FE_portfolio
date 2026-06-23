@@ -50,13 +50,15 @@
   color: var(--text-muted);
 }
 
-.info {
+ul.info {
+  padding-left: 20px;
   color: var(--text-body);
   letter-spacing: -0.75px;
+  list-style: square;
 }
 
 .link,
-.skill {
+ul.skill {
   display: flex;
   margin: 16px 0;
   flex-wrap: wrap;
@@ -83,7 +85,7 @@
   border: #0080ff 1px solid;
 }
 
-.skill div {
+ul.skill li {
   margin-right: 8px;
   margin-bottom: 10px;
   padding: 2px 16px 3px;
@@ -125,13 +127,14 @@
     margin-bottom: 10px;
   }
 
-  .skill {
+  ul.skill {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .skill div {
+
+  ul.skill li {
     margin-top: 8px;
   }
 }

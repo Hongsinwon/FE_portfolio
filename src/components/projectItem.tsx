@@ -52,12 +52,17 @@ export default function ProjectItem({
               );
             })}
         </div>
-        <p className={style.info}>{info}</p>
-        <div className={style.skill}>
+        <ul className={style.info}>
+          {info?.length &&
+            info.map((data, index) => {
+              return <li key={index}>{data}</li>;
+            })}
+        </ul>
+        <ul className={style.skill}>
           {skill.map((data) => {
-            return <div key={data}>{data}</div>;
+            return <li key={data}>{data}</li>;
           })}
-        </div>
+        </ul>
       </div>
     </div>
   );

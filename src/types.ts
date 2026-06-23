@@ -10,7 +10,7 @@ export interface ProjectData {
   personnel: string;
   linkData?: { url: string; text: string; target: boolean }[];
   skill: string[];
-  info?: string;
+  info?: string[];
 }
 
 export interface DetailContentData {
