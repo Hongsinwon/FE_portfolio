@@ -68,6 +68,10 @@
     list-style: square;
   }
 
+  .listContent ul {
+    padding-left: 25px;
+  }
+
   .content,
   .detailContent h4,
   .listContent p {

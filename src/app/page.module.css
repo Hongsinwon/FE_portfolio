@@ -2,7 +2,7 @@
   padding: 24px;
 }
 
-.title {
+.mainContent .title {
   margin-bottom: 16px;
   display: block;
   color: var(--color-primary);
@@ -11,6 +11,7 @@
 }
 
 .container {
+  margin-bottom: 20px;
   overflow-x: hidden;
   overflow-y: auto;
   box-sizing: border-box;
