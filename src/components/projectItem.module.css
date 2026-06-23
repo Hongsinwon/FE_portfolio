@@ -125,6 +125,10 @@ ul.skill li img {
     margin-bottom: 10px;
   }
 
+  ul.info {
+    list-style: none;
+  }
+
   ul.skill {
     display: flex;
     align-items: center;
