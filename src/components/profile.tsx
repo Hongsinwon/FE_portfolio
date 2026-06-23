@@ -30,7 +30,7 @@ export default function Profile() {
               <FontAwesomeIcon icon={faEnvelopeCircleCheck} />
               <span className={style.hide}>E-mail</span>
             </div>
-            <p className={style.contactValue}>ghdtlsdnjs1234@gmail.com</p>
+            <p className={style.contactValue}>ghdtlsdnjs12@naver.com</p>
           </div>
           <div className={style.contactContent}>
             <div className={style.contactTitle}>
