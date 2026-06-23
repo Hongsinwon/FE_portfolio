@@ -13,7 +13,7 @@ import gitIcon from "../../public/skill/git.png";
 import githubIcon from "../../public/skill/github.webp";
 import tailwindIcon from "../../public/skill/tailwind.webp";
 import figmaIcon from "../../public/skill/figma.webp";
-import photoshopIcon from "../../public/skill/photoshop.webp";
+import photoshopIcon from "../../public/skill/photoshop.png";
 import illustratorIcon from "../../public/skill/illustrator.webp";
 import adobeXdIcon from "../../public/skill/adobeXD.png";
 import firebaseIcon from "../../public/skill/Firebase.png";
