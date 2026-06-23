@@ -1,7 +1,7 @@
 .detailRenewal {
   margin-bottom: 60px;
-  border-top: #333 2px solid;
-  color: #fff;
+  border-top: 2px solid var(--color-border);
+  color: var(--foreground);
   line-height: 1.6;
   letter-spacing: -1px;
 }
@@ -11,5 +11,5 @@
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: bolder;
-  color: #fff;
+  color: var(--foreground);
 }
