@@ -12,7 +12,7 @@
   justify-content: space-between;
   height: 100%;
   color: var(--foreground);
-  line-height: 1.6;
+  line-height: 1.8;
   letter-spacing: -1px;
 }
 
@@ -31,6 +31,10 @@ ul.skill li img {
   align-items: center;
   justify-content: center;
   border: 1px solid var(--color-border);
+}
+
+.detailTopInfo .itemContent .content {
+  font-size: 18px;
 }
 
 @media (max-width: 900px) {

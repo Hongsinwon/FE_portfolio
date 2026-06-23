@@ -14,11 +14,11 @@ export default function DetailContent({
 }: DetailContentData) {
   return (
     <div className={style.detailContent} id={id}>
-      <div className={style.content}>
+      {/* <div className={style.content}>
         <p>{content}</p>
-      </div>
+      </div> */}
       <div className={style.skill}>
-        <h4>📍 주요 기능 및 특징</h4>
+        <h4 className={style.title}>📍 주요 기능 및 특징</h4>
         <ul>
           {skill.map((data, index) => {
             return <li key={index}>{data}</li>;
